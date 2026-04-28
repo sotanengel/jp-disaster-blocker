@@ -1,0 +1,35 @@
+name: jp_disaster_blocker_workspace
+description: Melos workspace root for jp-disaster-blocker.
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+# Dart native workspace + melos 7.x package paths
+workspace:
+  - apps/*
+  - packages/*
+
+dev_dependencies:
+  melos: ^7.5.1
+
+melos:
+  scripts:
+    test:
+      run: flutter test --reporter=compact
+      exec:
+        concurrency: 1
+        failFast: false
+      description: Run all tests
+
+    lint:
+      run: flutter analyze --no-fatal-infos
+      exec:
+        concurrency: 1
+      description: Run static analysis on all packages
+
+    format:
+      run: dart format . --set-exit-if-changed
+      exec:
+        concurrency: 1
+      description: Check code formatting
