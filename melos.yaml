@@ -1,0 +1,4 @@
+# This file documents the workspace structure.
+# Actual melos configuration is in pubspec.yaml (melos 7.x format).
+# See: https://melos.invertase.dev/configuration/overview
+name: jp_disaster_blocker
