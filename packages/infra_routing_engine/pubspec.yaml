@@ -1,0 +1,17 @@
+name: infra_routing_engine
+description: Routing engine FFI bridge (GraphHopper) for jp-disaster-blocker.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+resolution: workspace
+
+dependencies:
+  core:
+    path: ../core
+
+dev_dependencies:
+  test: ^1.25.0
+  very_good_analysis: ^7.0.0
