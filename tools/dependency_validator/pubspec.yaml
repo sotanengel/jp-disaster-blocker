@@ -1,0 +1,15 @@
+name: dependency_validator
+description: Validates that feature_* packages do not directly depend on each other.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+resolution: workspace
+
+dependencies:
+  yaml: ^3.1.0
+
+dev_dependencies:
+  test: ^1.25.0

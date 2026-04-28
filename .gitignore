@@ -1,0 +1,39 @@
+# Dart / Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.g.dart
+*.freezed.dart
+
+# Melos
+.melos_tool/
+.intellij/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+.DS_Store
+*.swp
+
+# Pub
+pubspec.lock
+!apps/*/pubspec.lock
+
+# Secrets / keys
+*.env
+*.pem
+*.key
+*.keystore
+google-services.json
+GoogleService-Info.plist
+
+# Generated
+coverage/
+lcov.info
