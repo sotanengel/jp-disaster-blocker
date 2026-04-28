@@ -42,6 +42,8 @@ dependencies:
     path: ../../packages/feature_checklist
   feature_evacuation:
     path: ../../packages/feature_evacuation
+  feature_hazard:
+    path: ../../packages/feature_hazard
   feature_location:
     path: ../../packages/feature_location
   feature_map:

@@ -1,10 +1,9 @@
 import 'package:feature_evacuation/feature_evacuation.dart';
-import 'package:feature_map/feature_map.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:latlong2/latlong.dart';
 
 import 'checklist_home_page.dart';
+import 'map_tab.dart';
 import 'providers.dart';
 import 'route_page.dart';
 
@@ -55,10 +54,7 @@ class _AppShellState extends ConsumerState<AppShell> {
   Widget _buildBody() {
     switch (_index) {
       case 0:
-        return MapPage(
-          initialCenter: const LatLng(kDefaultLat, kDefaultLng),
-          initialZoom: 13,
-        );
+        return const MapTab();
       case 1:
         final repoAsync = ref.watch(shelterRepositoryProvider);
         final locAsync = ref.watch(effectiveLocationProvider);

@@ -12,10 +12,11 @@ void main() {
       expect(HazardType.values, hasLength(4));
     });
 
-    test('each HazardType has a label and assetPath', () {
+    test('each HazardType has a label and package assetPath', () {
       for (final type in HazardType.values) {
         expect(type.label, isNotEmpty);
         expect(type.assetPath, contains('.pmtiles'));
+        expect(type.assetPath, startsWith('packages/feature_hazard/'));
       }
     });
   });

@@ -1,5 +1,6 @@
 import 'package:core/core.dart';
 import 'package:feature_evacuation/feature_evacuation.dart';
+import 'package:feature_hazard/feature_hazard.dart';
 import 'package:feature_location/feature_location.dart';
 import 'package:feature_routing/feature_routing.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -41,6 +42,13 @@ final shelterRepositoryProvider = FutureProvider<ShelterRepository>((
 ) async {
   final db = await ref.watch(appDatabaseProvider.future);
   return SqliteShelterRepository(db);
+});
+
+/// ハザード PMTiles 重畳（[feature_hazard]）。アプリ層で [MapPage] と合成する。
+final hazardLayerControllerProvider =
+    ChangeNotifierProvider<PmTilesHazardLayerController>((ref) {
+  // ChangeNotifierProvider が破棄時に [dispose] を呼ぶため ref.onDispose は不要。
+  return PmTilesHazardLayerController();
 });
 
 /// GraphHopper 本番配線前のスタブエンジン。グローバル束は [routingServiceProvider] 経由。
