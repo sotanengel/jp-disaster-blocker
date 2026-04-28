@@ -51,9 +51,10 @@ class _MapPageState extends State<MapPage> {
         if (widget.tileProvider != null)
           TileLayer(tileProvider: widget.tileProvider)
         else
+          // PMTiles 未指定時は視認性確保のため OSM を表示（本番は [tileProvider] に県タイルを渡す）
           TileLayer(
-            urlTemplate: '', // offline only — template unused when offline
-            tileProvider: AssetTileProvider(),
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            userAgentPackageName: 'jp_disaster_blocker',
           ),
         ...widget.layers,
       ],

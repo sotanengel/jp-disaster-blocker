@@ -36,6 +36,27 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  core:
+    path: ../../packages/core
+  feature_checklist:
+    path: ../../packages/feature_checklist
+  feature_evacuation:
+    path: ../../packages/feature_evacuation
+  feature_location:
+    path: ../../packages/feature_location
+  feature_map:
+    path: ../../packages/feature_map
+  feature_routing:
+    path: ../../packages/feature_routing
+  flutter_riverpod: ^2.6.1
+  infra_routing_engine:
+    path: ../../packages/infra_routing_engine
+  infra_storage:
+    path: ../../packages/infra_storage
+  latlong2: ^0.9.0
+  riverpod: ^2.6.1
+  ui_kit:
+    path: ../../packages/ui_kit
 
 dev_dependencies:
   flutter_test:

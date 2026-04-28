@@ -12,8 +12,6 @@ resolution: workspace
 dependencies:
   core:
     path: ../core
-  feature_location:
-    path: ../feature_location
   flutter:
     sdk: flutter
   flutter_map: ^8.0.0
