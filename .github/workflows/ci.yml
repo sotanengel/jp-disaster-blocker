@@ -47,3 +47,7 @@ jobs:
         run: melos bootstrap
       - name: Run tests
         run: melos run test
+      - name: Run lint
+        run: melos run lint
+      - name: Validate feature dependencies
+        run: dart run tools/dependency_validator/bin/validate.dart

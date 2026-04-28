@@ -1,0 +1,23 @@
+name: feature_checklist
+description: Disaster preparedness checklist feature for jp-disaster-blocker.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.0.0"
+
+resolution: workspace
+
+dependencies:
+  core:
+    path: ../core
+  flutter:
+    sdk: flutter
+  ui_kit:
+    path: ../ui_kit
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^7.0.0
