@@ -1,0 +1,22 @@
+name: feature_location
+description: Location service feature for jp-disaster-blocker.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+  flutter: ">=3.0.0"
+
+resolution: workspace
+
+dependencies:
+  core:
+    path: ../core
+  flutter:
+    sdk: flutter
+  geolocator: ^14.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^7.0.0
