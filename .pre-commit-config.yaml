@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  - repo: local
+    hooks:
+      - id: dart-format
+        name: dart format
+        language: system
+        entry: dart format --set-exit-if-changed
+        files: \.dart$
+
+      - id: dependency-validator
+        name: dependency_validator
+        language: system
+        entry: dart run tools/dependency_validator/bin/validate.dart
+        pass_filenames: false
+        always_run: true
