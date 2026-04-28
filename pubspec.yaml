@@ -9,9 +9,11 @@ environment:
 workspace:
   - apps/*
   - packages/*
+  - tools/*
 
 dev_dependencies:
   melos: ^7.5.1
+  very_good_analysis: ^7.0.0
 
 melos:
   scripts:
@@ -27,6 +29,10 @@ melos:
       exec:
         concurrency: 1
       description: Run static analysis on all packages
+
+    validate-deps:
+      run: dart run tools/dependency_validator/bin/validate.dart
+      description: Check that feature_* packages do not directly depend on each other
 
     format:
       run: dart format . --set-exit-if-changed
